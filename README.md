@@ -1,8 +1,29 @@
-# React + Vite
+# 📈 Crypto Market Tracker (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React dashboard that shows the **top 10 cryptocurrencies by market cap** using live data from the **CoinGecko API**, with instant search and sorting.
 
-Currently, two official plugins are available:
+🔗 **Live demo:** https://sonu2002.github.io/crypto-market-tracker/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
+- Live prices, market cap, volume and 24h % change from the CoinGecko REST API
+- 🔍 Search by **coin name or symbol**
+- ↕️ Sort by **market cap** or **24h percentage change**
+- 🟢🔴 Colour-coded gains and losses
+- Friendly empty-state message when nothing matches the search
+
+## 🛠️ Tech stack
+`React` · `Vite` · `styled-components` · `Sass` · `Fetch API` · `GitHub Pages`
+
+## 🗂️ Project structure
+```
+src/
+├── components/   Header (search + sort), Main, Table, TableData, Message
+└── services/     api.js (endpoint), fetchData.js, filterData.js (search & sort logic)
+```
+API, data fetching and filtering live in `services/`, separate from the UI components.
+
+## 🚀 Run locally
+```bash
+npm install
+npm run dev
+```
